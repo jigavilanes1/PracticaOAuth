@@ -1,8 +1,8 @@
 <?php
 
-$clientID = 'c71e9e50f4d204643cbd';
-$clientSecret = '575df0188a93f834632ae71ee058aaad00d63b8c'; 
-$redirectUri = 'https://jigavilanes1.github.io/PracticaOAuth/calback.php'; 
+$clientID = '98365dc2488fac0100db';
+$clientSecret = '6cda867c8a945cadb677161322d2abd270c92d69'; 
+$redirectUri = 'https://jigavilanes1.github.io/PracticaOAuth/callback.php'; 
 
 session_start();
 if (empty($_GET['state']) || $_GET['state'] !== $_SESSION['github_oauth_state']) {
@@ -33,7 +33,7 @@ if (isset($_GET['code'])) {
     session_start();
     $_SESSION['github_access_token'] = $data['access_token'];
 
-    header("Location: https://jigavilanes1.github.io/LandingPage_CODIGO/");
+    header("Location: https://jigavilanes1.github.io/PracticaOAuth");
     exit;
 } else {
     die("Error: No se proporcionó el código de autorización.");
