@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Club Soft</title>
+  <link href="img/fav.png" rel="icon">
+  <!--CSS-->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+  <div class="login-wrap">
+    <div class="login-html">
+      <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Ingresar</label>
+      <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registrarse</label>
+      <div class="login-form">
+        <div class="sign-in-htm">
+            <div class="form-group" style="margin-top: -10px; margin-left: 140px; width: 100px;">
+                <img class="img-responsive img-circle" src="img/login.png" style="display: block;">
+            </div>
+          <div class="group">
+            <label for="user" class="label" style="text-align:left;">Usuario</label>
+            <input  onChange="validarUsuario();" required type="text" class="input" id="crearUsuario">
+          </div>
+          <div class="group">
+            <label for="pass" class="label" style="text-align:left;">Contraseña</label>
+            <input onChange="validarContra();" required type="password" class="input" id="crearContra">
+          </div>
+          <div class="group">
+            <input id="check" type="checkbox" class="check" checked>
+            <label for="check"><span class="icon"></span> Recuerdame</label>
+          </div>
+          <div class="group">
+            <input type="submit" class="button" value="Ingresar">
+          </div>
+          <div class="hr"></div>
+          <div class="foot-lnk">
+            <a href="#forgot">Olvidaste tu contrseña</a>
+          </div>
+        </div>
+        <div class="sign-up-htm">
+          <div class="group">
+            <label  id="indexNombre" for="last" class="label" style="text-align:left;">Nombre</label>
+            <input required type="text" type="text" class="input" id="crearNombre" onchange="validarNombre();">
+          </div>
+          <div class="group">
+            <label for="last" class="label" style="text-align:left;">Apellido</label>
+            <input required type="text" type="text" class="input" id="crearApellido" onchange="validarApellido();">
+          </div>
+          <div class="group">
+            <label for="last" class="label" style="text-align:left;">Cedula Identidad</label>
+            <input required type="number" class="input" id="crearCedula" onchange="validarCedula();">
+          </div>
+          <div class="group">
+            <label for="date" class="label" style="text-align:left;">Fecha de Nacimiento</label>
+            <input required type="date" class="input" data-type="date" id="crearFecha" onchange="validarFecha();">
+          </div>
+
+          <div class="group">
+            <label for="pass" class="label" style="text-align:left;">Correo Electronico</label>
+            <input required type="email" class="input" id="crearCorreo" onchange="validarCorreo();">
+          </div>
+          <div class="group">
+            <input type="submit" class="button" value="Generar usuario y contrseña">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/validaciones.js"></script>
+</html>
