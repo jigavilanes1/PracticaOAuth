@@ -2,7 +2,7 @@
 
 $clientID = 'c71e9e50f4d204643cbd';
 $clientSecret = '575df0188a93f834632ae71ee058aaad00d63b8c'; 
-$redirectUri = 'https://jigavilanes1.github.io/LandingPage_CODIGO/calback.php'; 
+$redirectUri = 'https://jigavilanes1.github.io/PracticaOAuth/calback.php'; 
 
 session_start();
 if (empty($_GET['state']) || $_GET['state'] !== $_SESSION['github_oauth_state']) {
